@@ -52,7 +52,7 @@
 
     ## JS/TS
     ember-cli
-    unstable.lerna_6
+    lerna_6
     nodejs_22
     pnpm
     typescript
@@ -73,7 +73,7 @@
     # Language servers
     bash-language-server
     dockerfile-language-server-nodejs
-    unstable.ember-language-server
+    ember-language-server
     gopls
     jdt-language-server
     lua-language-server
