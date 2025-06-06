@@ -15,10 +15,11 @@
     };
 
     keybindings = {
-      "f4" = "launch --location=split";
-      "f5" = "launch --location=hsplit";
-      "f6" = "launch --location=vsplit";
+      "f4" = "launch --cwd=current --location=split";
+      "f5" = "launch --cwd=current --location=hsplit";
+      "f6" = "launch --cwd=current --location=vsplit";
       "f7" = "layout_action rotate";
+      "cmd+t" = "launch --cwd=current --type=tab";
       "shift+up" = "move_window up";
       "shift+left" = "move_window left";
       "shift+right" = "move_window right";
