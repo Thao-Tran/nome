@@ -5,6 +5,7 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
+      copilot-vim
       coq-artifacts
       {
         plugin = coq_nvim;
