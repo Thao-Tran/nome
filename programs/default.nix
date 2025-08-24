@@ -1,7 +1,8 @@
 {
   imports = [
     ./direnv/default.nix
-    ./firefox/default.nix
+    # Firefox is really finicky so just gonna exclude from home-manager now
+    # ./firefox/default.nix
     ./git/default.nix
     ./home-manager/default.nix
     ./kitty/default.nix
