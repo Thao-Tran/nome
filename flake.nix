@@ -12,8 +12,9 @@
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
-    nixpkgs-firefox-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    # Firefox is really finicky so just gonna exclude from home-manager now
+    # nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
+    # nixpkgs-firefox-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -22,7 +23,8 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
-      nixpkgs-firefox-darwin,
+      # Firefox is really finicky so just gonna exclude from home-manager now
+      # nixpkgs-firefox-darwin,
       ...
     }@inputs:
     let
@@ -73,7 +75,8 @@
           };
         };
 
-        firefox = nixpkgs-firefox-darwin.overlay;
+        # Firefox is really finicky so just gonna exclude from home-manager now
+        # firefox = nixpkgs-firefox-darwin.overlay;
       };
 
       homeConfigurations = {
