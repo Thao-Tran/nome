@@ -53,8 +53,7 @@
 
     ## JS/TS
     ember-cli
-    lerna_6
-    nodejs_22
+    nodejs_24
     pnpm
     typescript
     turbo
