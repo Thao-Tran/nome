@@ -66,6 +66,7 @@
     git-filter-repo
     k9s
     kubectl
+    spotify-to-tidal
     ripgrep
     watchman
     zk
