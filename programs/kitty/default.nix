@@ -6,6 +6,7 @@
 
     font.package = pkgs.fira-code;
     font.name = "FiraCode";
+    font.size = 14.0;
 
     themeFile = "Doom_One";
 
