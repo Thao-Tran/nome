@@ -51,6 +51,14 @@
       merge = {
         tool = "nvimdiff";
       };
+
+      checkout = {
+        defaultRemote = "origin";
+      };
+
+      init = {
+        defaultBranch = "main";
+      };
     };
 
     aliases = {
