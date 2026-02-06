@@ -7,9 +7,9 @@
     plugins = with pkgs.vimPlugins; [
       copilot-vim
       {
-        plugin = CopilotChat-nvim;
+        plugin = codecompanion-nvim;
         type = "lua";
-        config = "require('CopilotChat').setup()";
+        config = "require('codecompanion').setup()";
       }
       coq-artifacts
       {
