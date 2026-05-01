@@ -10,7 +10,7 @@
 
     shellAliases = { };
 
-    initExtra = ''
+    initContent = ''
       export SSL_CERT_FILE=$(nix config show ssl-cert-file)
       export NODE_EXTRA_CA_CERTS=$SSL_CERT_FILE
       export CARGO_HTTP_CAINFO=$SSL_CERT_FILE
