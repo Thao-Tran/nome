@@ -8,7 +8,7 @@
       "*.orig"
     ];
 
-    extraConfig = {
+    settings = {
       column = {
         ui = "auto";
       };
@@ -59,14 +59,14 @@
       init = {
         defaultBranch = "main";
       };
-    };
 
-    aliases = {
-      co = "checkout";
-      pl = "pull";
-      ph = "push";
-      cm = "commit";
-      cma = "commit --amend";
+      aliases = {
+        co = "checkout";
+        pl = "pull";
+        ph = "push";
+        cm = "commit";
+        cma = "commit --amend";
+      };
     };
   };
 }
