@@ -17,6 +17,10 @@
       export CURL_CA_BUNDLE=$SSL_CERT_FILE
       export REQUESTS_CA_BUNDLE=$SSL_CERT_FILE
       export AWS_CA_BUNDLE=$SSL_CERT_FILE
+
+      mkdir -p ~/.docker/certs.d
+
+      cp -f $SSL_CERT_FILE ~/.docker/certs.d/nix.pem
     '';
   };
 }
