@@ -1,11 +1,9 @@
-local lspconfig = require('lspconfig')
+vim.lsp.enable('cssls')
+vim.lsp.enable('bashls')
+vim.lsp.enable('dockerls')
+vim.lsp.enable('ember')
 
-lspconfig.cssls.setup{}
-lspconfig.bashls.setup{}
-lspconfig.dockerls.setup{}
-lspconfig.ember.setup{}
-
-lspconfig.eslint.setup({
+vim.lsp.config('eslint', {
   on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
@@ -14,11 +12,11 @@ lspconfig.eslint.setup({
   end,
 })
 
-lspconfig.gopls.setup{}
-lspconfig.html.setup{}
-lspconfig.jdtls.setup{}
-lspconfig.jsonls.setup{}
-lspconfig.lua_ls.setup{
+vim.lsp.enable('gopls')
+vim.lsp.enable('html')
+vim.lsp.enable('jdtls')
+vim.lsp.enable('jsonls')
+vim.lsp.config('lua_ls', {
   on_init = function(client)
     if client.workspace_folders then
       local path = client.workspace_folders[1].name
@@ -50,20 +48,20 @@ lspconfig.lua_ls.setup{
   settings = {
     Lua = {}
   }
-}
-lspconfig.marksman.setup{}
-lspconfig.nginx_language_server.setup{}
-lspconfig.nixd.setup{}
-lspconfig.pylyzer.setup{}
-lspconfig.rust_analyzer.setup{}
-lspconfig.stylelint_lsp.setup{}
-lspconfig.stylelint_lsp.setup{}
-lspconfig.svelte.setup{}
-lspconfig.tailwindcss.setup{}
-lspconfig.tailwindcss.setup{}
-lspconfig.terraformls.setup{}
-lspconfig.texlab.setup{}
-lspconfig.ts_ls.setup{}
-lspconfig.vimls.setup{}
-lspconfig.yamlls.setup{}
-lspconfig.zk.setup{}
+})
+vim.lsp.enable('marksman')
+vim.lsp.enable('nginx_language_server')
+vim.lsp.enable('nixd')
+vim.lsp.enable('pylyzer')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('stylelint_lsp')
+vim.lsp.enable('stylelint_lsp')
+vim.lsp.enable('svelte')
+vim.lsp.enable('tailwindcss')
+vim.lsp.enable('tailwindcss')
+vim.lsp.enable('terraformls')
+vim.lsp.enable('texlab')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('vimls')
+vim.lsp.enable('yamlls')
+vim.lsp.enable('zk')
