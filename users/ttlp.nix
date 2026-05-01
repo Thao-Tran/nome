@@ -146,10 +146,10 @@
   home.sessionVariables = {
   };
 
-  programs.git.userName = "Thao-Tran Le-Phuong";
-  programs.git.userEmail = "thaotran.lp@gmail.com";
+  programs.git.settings.user.name = "Thao-Tran Le-Phuong";
+  programs.git.settings.user.email = "thaotran.lp@gmail.com";
 
-  programs.git.extraConfig.credential = {
+  programs.git.settings.credential = {
     "https://github.com" = {
       username = "Thao-Tran";
     };
