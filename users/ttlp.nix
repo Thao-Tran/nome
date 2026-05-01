@@ -73,6 +73,7 @@
 
     # Language servers
     bash-language-server
+    copilot-language-server
     dockerfile-language-server-nodejs
     ember-language-server
     gopls
