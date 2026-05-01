@@ -5,12 +5,7 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      copilot-vim
-      {
-        plugin = codecompanion-nvim;
-        type = "lua";
-        config = "require('codecompanion').setup()";
-      }
+      opencode-nvim
       coq-artifacts
       {
         plugin = coq_nvim;
