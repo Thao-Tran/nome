@@ -1,6 +1,6 @@
 { outputs, pkgs, ... }:
 {
-  imports = [ ../programs/default.nix ];
+  imports = [ ../programs/default.nix ../services/default.nix ];
 
   nixpkgs = {
     # You can add overlays here
