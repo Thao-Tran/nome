@@ -62,6 +62,14 @@
           # example = prev.example.overrideAttrs (oldAttrs: rec {
           # ...
           # });
+
+          direnv =
+            if prev.stdenv.isDarwin then
+              prev.direnv.overrideAttrs (_: {
+                doCheck = false;
+              })
+            else
+              prev.direnv;
         };
 
         # When applied, the unstable nixpkgs set (declared in the flake inputs) will
