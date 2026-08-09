@@ -7,6 +7,8 @@ dev tools and configs I'll need. I call it my "Nome" for short.
 
 1. Download this repo to `~/.config/home-manager`. I know the repo is called
    `nome` but the folder name needs to be `home-manager`, so sorry.
+    * The main branch will be kept up to date with the latest stable nixpkgs and home-manager version.
+    * If you need to use an older or unstable version, there are different with compatible configurations and setups available to use.
 2. Install the [Required tools](#required-tools).
 3. Add a specific configuration for your username and hostname to [flake.nix](./flake.nix) and [./users](./users/).
 4. Run this script to setup the nome:
