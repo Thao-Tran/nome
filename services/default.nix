@@ -1,5 +1,5 @@
 {
   imports = [
-    ./colima/default.nix
+    # Import home-manager service configurations here
   ];
 }

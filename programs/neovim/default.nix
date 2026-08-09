@@ -5,11 +5,6 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      {
-        plugin = pkgs.unstable.vimPlugins.opencode-nvim;
-        type = "lua";
-        config = lib.fileContents ./opencode.lua;
-      }
       coq-artifacts
       {
         plugin = coq_nvim;

@@ -26,6 +26,11 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      permittedInsecurePackages = [
+        "lima-full-1.2.2"
+        "lima-additional-guestagents-1.2.2"
+        "docker-28.5.2"
+      ];
     };
   };
 
@@ -41,7 +46,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  home.stateVersion = "25.11"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -61,12 +66,12 @@
     # Misc CLI tools
     awscli2
     curl
+    colima
     docker
     fd
     git-filter-repo
     k9s
     kubectl
-    spotify-to-tidal
     ripgrep
     watchman
     zk
@@ -74,7 +79,7 @@
     # Language servers
     bash-language-server
     copilot-language-server
-    dockerfile-language-server-nodejs
+    dockerfile-language-server
     ember-language-server
     gopls
     jdt-language-server
