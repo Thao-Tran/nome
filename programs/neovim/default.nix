@@ -62,7 +62,7 @@
         plugin = nvim-treesitter.withAllGrammars;
         type = "lua";
         config = ''
-          require('nvim-treesitter.configs').setup {
+          require('nvim-treesitter.config').setup {
             hightlight = {
               enable = true
             },
