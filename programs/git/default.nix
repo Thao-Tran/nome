@@ -6,6 +6,7 @@
       ".DS_Store"
       "*.d.ts"
       "*.orig"
+      "worktrees"
     ];
 
     settings = {
