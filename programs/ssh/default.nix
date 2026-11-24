@@ -3,7 +3,7 @@
     enable = true;
     enableDefaultConfig = false;
 
-    matchBlocks = {
+    settings = {
       "*" = {
         forwardAgent = false;
         # Default: addKeysToAgent = "no";

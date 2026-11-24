@@ -6,7 +6,7 @@
 
     plugins = with pkgs.vimPlugins; [
       {
-        plugin = pkgs.unstable.vimPlugins.opencode-nvim;
+        plugin = opencode-nvim;
         type = "lua";
         config = lib.fileContents ./opencode.lua;
       }
@@ -95,6 +95,6 @@
     ];
 
     extraConfig = lib.fileContents ../vim/init.vim;
-    extraLuaConfig = lib.fileContents ./init.lua;
+    initLua = lib.fileContents ./init.lua;
   };
 }
