@@ -70,6 +70,17 @@
               })
             else
               prev.direnv;
+
+            opencode = prev.opencode.overrideAttrs (old: {
+              passthru = old.passthru // {
+                node_modules = old.passthru.node_modules.overrideAttrs (deps: {
+                  env = (deps.env or { }) // {
+                    # Public root from the system keychain, also trusted by Nix's CA bundle.
+                    NODE_EXTRA_CA_CERTS = "${./files/zscaler-root-ca.pem}";
+                  };
+                });
+              };
+            });
         };
 
         # When applied, the unstable nixpkgs set (declared in the flake inputs) will
