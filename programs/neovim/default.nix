@@ -10,38 +10,16 @@
         type = "lua";
         config = lib.fileContents ./opencode.lua;
       }
-      coq-artifacts
+      cmp-nvim-lsp
+      cmp-buffer
+      cmp-path
+      cmp-cmdline
+      cmp-vsnip
+      vim-vsnip
       {
-        plugin = coq_nvim;
+        plugin = nvim-cmp;
         type = "lua";
-        config = ''
-          vim.g.coq_settings = {
-            auto_start = 'shut-up',
-            weights = {
-              recency = 2.5,
-            },
-
-            clients = {
-              buffers = {
-                enabled = true,
-                weight_adjust = -1.9,
-                same_filetype = true,
-              },
-              tree_sitter = {
-                enabled = true,
-                weight_adjust = 1.0
-              },
-              lsp = {
-                enabled = true,
-                weight_adjust = 1.5
-              },
-              snippets = {
-                enabled = true,
-                weight_adjust = -1.9
-              },
-            },
-          }
-        '';
+        config = lib.fileContents ./nvim-cmp.lua;
       }
       {
         plugin = gitsigns-nvim;
